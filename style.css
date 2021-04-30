@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Antic&family=Cormorant:ital,wght@1,300;1,500&family=Cutive+Mono&family=Philosopher:ital,wght@0,400;1,700&family=Rubik+Mono+One&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  width: 100%;
+  font-family: 'Cutive Mono', monospace;
+  /* font-family: 'Philosopher', sans-serif; */
+  /* font-family: 'Rubik Mono One', sans-serif; */
+}
+
+                /* Navigation  */
+nav {
+  margin: auto;
+  width: 90%;
+  height: 1082px;
+  background-image: url(./image/pexels-dmitriy-ganin-7694122.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.hamb-menu{
+  display: flex;
+  justify-content: space-around;
+
+}
+label{
+    position: fixed;
+    width: 45px;
+    height: 22px;
+    left: 6%;
+    top: 65px;
+    border: 2px solid #735d5d;
+    border-radius: 20px;
+    z-index: 2;
+}
+label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 18px;
+  left: 1px;
+  top: 0.45px;
+  border: 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #735d5d;
+  transition: 0.4s;
+}
+label.active::before{
+  left: 24px;
+  background: #cfd9df;
+}
+
+body.night{
+  background: rgb(22 21 21);
+  opacity: 0.9;
+}
+
+.hamb-menu img{
+  position: fixed;
+  top: 35px;
+  display: none;
+  width: 4%;
+  height: 5%;
+  margin: 3% 0 0 -1%;
+  cursor: pointer;
+  z-index: 2;
+  right: 70px;
+  opacity: 0.6;
+}
+.navigation{
+  background: white;
+  width: 90%;
+  display: flex;
+  z-index: 1;
+  justify-content: flex-end;
+  position: fixed;
+  opacity: 0.8;
+  margin-top: 25px;
+}
+
+.navigation li {
+  list-style-type: none;
+  margin: 15px;
+  margin-top: 40px;
+} 
+
+.navigation li:last-child{
+  margin-right: 30px;
+}
+
+.navigation a{
+  text-decoration: none;
+  color: rgb(0 0 0);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Antic', sans-serif;
+}
+
+.navigation a:hover{
+  border-bottom: 5px solid rgb(39, 37, 37);
+}
+/* a:visited{
+  border-bottom: 5px solid rgb(24, 21, 21);
+} */
+.iam {
+  padding-top: 380px;
+  padding-left: 100px;
+  overflow: hidden;
+}
+.iam h1, p{
+  text-transform: uppercase;
+  color: rgb(253, 253, 253);
+}
+
+.iam h1{
+  font-size: 3.6em;
+  word-spacing: -4px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-shadow: 8px 3px 4px #0c0303;
+  -webkit-animation: 4s ease-in-out 700ms 1 normal move_eye;
+}
+.iam p{
+  font-size: 1.3em;
+  margin-left: 170px;
+  text-shadow: 1px 6px 7px #1e3e5c;
+}
+@-webkit-keyframes move_eye { 0% { margin-left:-100%; } 100% { margin-left:0%; }}
+/* Main block */
+
+main{
+  width: 90%;
+  margin: auto;
+}
+
+section {
+  /* height: 541px; */
+}
+.bout{
+  display: flex;
+  justify-content: space-around;
+  margin: 170px 0;
+  }
+
+.description{
+  margin: auto;
+  max-width: 50%;
+}
+
+.description h2{
+  color: #0c0303;
+  margin: 40px 0;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+.description p{
+  color: #0c0303;
+  line-height: 2.5;
+  font-size: 1rem;
+}
+
+.bout img{
+  height: 50%;
+  margin-top: 90px;
+  margin-right: 90px;
+  border-radius: 3%;
+  width: 30%;
+}
+
+/* Skills section  */
+
+.skill{
+  margin: 170px 5%;
+}
+.skill h2{
+  font-size: 2.3em;
+    margin: 5% 2%;
+  text-transform: uppercase;
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+.container img{
+  width: 10%;
+  height: auto;
+  margin: 1%;
+}
+
+/* Projects section */
+
+.project{
+  height: 1000px;
+}
+  /* Footer */
+
+footer {
+  background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  width: 90%;
+  margin: auto;
+}
+
+.hire{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.hire li{
+  list-style: none;
+  text-align: center;
+  margin: 20px -100px;
+}
+.hire li{
+  list-style: none;
+  text-align: center;
+  margin: 20px -100px;
+  overflow: hidden;
+}
+
+.hire img{
+  width: 6%;
+}
+
+.hire li:first-child img:hover, li:nth-child(2) img:hover{
+  width: 6.5%;
+}
+.hire li:last-child img:hover{
+  animation: ring 1s linear infinite backwards;
+}
+@keyframes ring {
+  0% {
+    transform: rotate(20deg);
+  }
+  100%{
+    transform: rotate(0deg);
+  }
+}
+.send{
+  text-decoration: none;
+  color: black;
+}
+.contact h2{
+  font-size: 2rem;
+    margin: 0 4%;
+    padding: 5% 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+footer p{
+  margin: 10px 0 0 0;
+  padding-bottom: 20px;
+  color: #0c0303;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.heart{
+  color: red;
+  font-size: 1.4rem;
+}
+
+
+@media only screen and (max-width: 1024px){
+  nav {
+    height: 865px;
+  }
+  .navigation a {
+    font-size: 1rem;
+  }
+  .iam {
+    padding-top: 330px;
+    padding-left: 40px;
+  }
+  .iam h1 {
+    font-size: 2.6em;
+    word-spacing: -10px;
+    letter-spacing: 3px;
+  }
+  .iam p {
+    font-size: 1.3em;
+    margin-left: 110px;
+  }
+  .description p {
+    line-height: 2;
+    font-size: 0.8rem;
+  }
+  .bout img {
+    margin-right: 40px;
+  }
+}
+
+@media only screen and (max-width: 780px){
+  .navigation{
+    display: none;
+    padding-left: 150px;
+  }
+  .hamb-menu img {
+    display: block;
+    position: fixed;
+    top: 35px;
+    width: 6%;
+    height: auto;
+}
+.navigation li {
+  margin: 10px;
+  margin-top: 30px;
+}
+  .navigation a {
+    font-size: 0.8rem;
+  }
+  .iam h1 {
+    font-size: 2.2em;
+  }
+  .iam p {
+    font-size: 1.2em;
+    margin-left: 11px;
+  }
+  .description h2 {
+    font-size: 2em;
+  }
+  .description p {
+    font-size: 0.7rem;
+  }
+  .skill h2 {
+    font-size: 2em;
+  }
+  .contact h2 {
+    font-size: 1.5rem;
+  }
+  .hire li {
+    margin: 10px -100px;
+  }
+  .hire li:first-child img:hover, li:nth-child(2) img:hover{
+    width: 6%;
+  }
+  footer p {
+    font-size: 0.7rem;
+  }
+  .heart {
+    font-size: .7rem;
+  }
+}
+@media only screen and (max-width: 650px){
+  body, nav, main, footer{
+    width: 99%;
+  }
+
+nav {
+    height: 736px;
+}
+.hamb-menu img {
+  top: 4%;
+  display: block;
+  width: 10%;
+  height: auto;
+  margin: 3% 0 0 -1%;
+  right: 6%;
+  opacity: 0.5;
+}
+.navigation {
+  display: none;
+}
+.iam {
+  padding-top: 50%;
+  padding-left: 10%;
+}
+.iam h1 {
+  font-size: 1.9em;
+  word-spacing: 1px;
+}
+.iam p {
+  font-size: 1em;
+  margin-left: 11px;
+}
+.description p {
+  font-size: 0.6rem;
+  text-align: justify;
+}
+.bout img {
+margin-top: 40%;
+}
+.bout {
+  display: block;
+  justify-content: space-around;
+  margin: 170px 0;
+}
+.description h2 {
+  font-size: 2em;
+  text-align: center;
+}
+.bout img {
+  margin-top: 10%;
+  margin-left: 25%;
+  width: 50%;
+}
+.skill h2 {
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 20%;
+}
+.container {
+  flex-wrap: wrap;
+}
+.container img {
+  width: 20%;
+  margin: 3%;
+}
+.hire li {
+  margin: 10px -60px;
+}
+.contact h2 {
+  font-size: 1.2rem;
+}
+footer p {
+  font-size: 0.6rem;
+}
+.hire {
+  display: block;
+}
+}
+
+@media only screen and (max-width: 380px){
+.iam h1 {
+    font-size: 1.5em;
+    animation: none;
+}
+.iam p {
+  font-size: .9em;
+  margin-left: 5px;
+}
+}
+
+@media only screen and (max-width: 320px){
+  .hamb-menu img {
+    top: 4.1%;
+    display: block;
+    width: 10%;
+  }
+.iam {
+    padding-top: 90%;
+    padding-left: 10%;
+}
+.iam h1 {
+    font-size: 1.2em;
+    animation: none;
+}
+.iam p {
+  font-size: .8em;
+  margin-left: -5px;
+}
+.description {
+  max-width: 69%;
+}
+.bout img {
+  margin-left: 15%;
+  width: 72%;
+}
+.skill h2 {
+  font-size: 1.5em;
+}
+.container img {
+  width: 25%;
+  margin: 7%;
+}
+.hire img {
+  width: 8%;
+}
+.hire li:first-child img:hover, li:nth-child(2) img:hover{
+  width: 8%;
+}
+footer p {
+  font-size: 0.5rem;
+  font-weight: bold;
+  padding: 0 0 12px 0;
+}
+}
+
+/*  */
+.night .iam h1 {
+  color: #fcfeff;
+}
+
+.night.iam p {
+  color: #fcf6f6;
+  text-shadow: -14px 8px 11px #274845;
+}
+
+.night h2{
+  color:rgb(238, 235, 235);
+}
+
+.night p{
+  color:rgb(255 255 255);
+}
+.night img{
+  opacity: 1;
+  z-index: 3;
+}
+
+.night .contact h2{
+  color: #000;
+}
+.night .contact p {
+  color: #000;
+}
+
+.menu .navigation{
+  display: block;
+}
