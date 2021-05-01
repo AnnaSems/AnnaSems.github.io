@@ -23,7 +23,7 @@ function block() {
   }
 }
 
-menu.addEventListener(('click'), events);
+menu.addEventListener(('mouseover'), events);
 menu.addEventListener(('click'), block);
 
 
