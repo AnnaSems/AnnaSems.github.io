@@ -359,7 +359,7 @@ nav {
     height: 736px;
 }
 .hamb-menu img {
-  top: 4%;
+  top: 6.2%;
   display: block;
   width: 10%;
   height: auto;
@@ -377,6 +377,7 @@ nav {
 .iam h1 {
   font-size: 1.9em;
   word-spacing: 1px;
+  animation: none;
 }
 .iam p {
   font-size: 1em;
