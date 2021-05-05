@@ -23,7 +23,8 @@ function block() {
   }
 }
 
-menu.addEventListener(('mouseover'), events);
+menu.addEventListener(('touchstart'), events);
+// menu.addEventListener(('touchmove'), events);
 menu.addEventListener(('click'), block);
 
 
