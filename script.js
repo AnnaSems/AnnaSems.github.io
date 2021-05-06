@@ -12,20 +12,27 @@ nightMode.addEventListener('click', function () {
   content.classList.toggle('night');
 })
 
-function events() {
-  for (var i = 0; i < bar.length; i++) {
-    bar[i].style.display = 'block';
-  }
-}
-function block() {
-  for (var i = 0; i < bar.length; i++) {
-    bar[i].style.display = 'none';
-  }
-}
+menu.addEventListener('click', function () {
+  menu.classList.toggle('change');
+});
 
-menu.addEventListener(('touchstart'), events);
+
+
+// function events() {
+//   for (var i = 0; i < bar.length; i++) {
+//     bar[i].style.display = 'block';
+//   }
+// }
+
+// function block() {
+//   for (var i = 0; i < bar.length; i++) {
+//     bar[i].style.display = 'none';
+//   }
+// }
+
+// menu.addEventListener(('touchstart'), events);
 // menu.addEventListener(('touchmove'), events);
-menu.addEventListener(('click'), block);
+// menu.addEventListener('click', block);
 
 
 

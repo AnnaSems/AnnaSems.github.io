@@ -26,7 +26,6 @@ nav {
 .hamb-menu{
   display: flex;
   justify-content: space-around;
-
 }
 label{
     position: fixed;
@@ -52,7 +51,7 @@ label::before {
   transition: 0.4s;
 }
 label.active::before{
-  left: 24px;
+  left: 21px;
   background: #cfd9df;
 }
 
@@ -61,7 +60,7 @@ body.night{
   opacity: 0.9;
 }
 
-.hamb-menu img{
+.bar{
   position: fixed;
   top: 35px;
   display: none;
@@ -72,6 +71,23 @@ body.night{
   z-index: 2;
   right: 70px;
   opacity: 0.6;
+}
+
+.bar2, .bar3, .bar4{
+  width: 35px;
+  height: 5px;
+  background-color: #251a1a;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar2{
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar3{
+  opacity: 0;
+}
+.change .bar4{
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 .navigation{
   background: white;
@@ -140,9 +156,6 @@ main{
   margin: auto;
 }
 
-section {
-  /* height: 541px; */
-}
 .bout{
   display: flex;
   justify-content: space-around;
@@ -304,11 +317,20 @@ footer p{
     display: none;
     padding-left: 150px;
   }
-  .hamb-menu img {
+
+.change .navigation{
+    display: block;
+  }
+
+.change .navigation a:hover{
+  border-bottom: 5px solid rgb(39, 37, 37);
+  }
+  
+.bar {
     display: block;
     position: fixed;
-    top: 35px;
-    width: 6%;
+    top: 3%;
+    right: 8%;
     height: auto;
 }
 .navigation li {
@@ -358,8 +380,8 @@ footer p{
 nav {
     height: 736px;
 }
-.hamb-menu img {
-  top: 6.2%;
+.bar {
+  top: 6%;
   display: block;
   width: 10%;
   height: auto;
@@ -432,6 +454,7 @@ footer p {
 
 @media only screen and (max-width: 380px){
 .iam h1 {
+  margin-top: 29%;
     font-size: 1.5em;
     animation: none;
 }
@@ -442,7 +465,7 @@ footer p {
 }
 
 @media only screen and (max-width: 320px){
-  .hamb-menu img {
+  .bar {
     top: 4.1%;
     display: block;
     width: 10%;
@@ -515,6 +538,10 @@ footer p {
   color: #000;
 }
 
+.night .bout img {
+  z-index: 1;
+}
 .menu .navigation{
   display: block;
 }
+
